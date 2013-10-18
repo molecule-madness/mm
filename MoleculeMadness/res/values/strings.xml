@@ -4,5 +4,11 @@
     <string name="app_name">Molecule Madness</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_hint">Hint</string>
+    <string name="hint_instruction">Answer this to receive a hint!</string>
+    <string name="hint_default_question">What Johnny thought was H2O was actually:</string>
+    <string name="hint_def_btn_A">Nitrogen</string>
+    <string name="hint_def_btn_B">Water</string>
+    <string name="hint_def_btn_C">H2S04</string>
 
 </resources>
