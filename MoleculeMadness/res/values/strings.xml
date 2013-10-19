@@ -20,6 +20,14 @@
     <string name="hint_btn_def_txt">An Answer</string>
     <string name="hint_pass_toast">Correct! Here\'s your hint</string>
     <string name="hint_fail_toast">Wrong! Sorry, try again</string>
+    <string name="title_activity_new_game">New Game</string>
+    <string name="game_mode">Choose a game mode</string>
+    <string name="new_game_rb_scoring">Scoring</string>
+    <string name="new_game_rb_time_attack">Time Attack</string>
+    <string name="new_game_difficulty">Choose a difficulty</string>
+    <string name="new_game_rb_easy">Easy</string>
+    <string name="new_game_rb_difficult">Difficult</string>
+    <string name="new_game_menu_start">Start</string>
 
 
 </resources>

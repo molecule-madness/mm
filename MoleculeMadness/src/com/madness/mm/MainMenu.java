@@ -2,6 +2,7 @@ package com.madness.mm;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 
 public class MainMenu extends Activity {
@@ -10,6 +11,9 @@ public class MainMenu extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
+		
+		Intent intent = new Intent(this, NewGameActivity.class);
+		startActivity(intent);
 	}
         Button startButton = (Button)findViewById(R.id.Start_button);
         startButton.setOnClickListener(startListener); // Register the onClick listener with the implementation above
