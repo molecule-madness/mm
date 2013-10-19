@@ -26,7 +26,7 @@
         android:layout_height="@dimen/hint_spacer"/>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/hintQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -36,26 +36,12 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="@dimen/hint_spacer"/>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="@dimen/hint_btn_min_width"
-        android:text="@string/hint_def_btn_A" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="@dimen/hint_btn_min_width"
-        android:text="@string/hint_def_btn_B" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="@dimen/hint_btn_min_width"
-        android:text="@string/hint_def_btn_C" />
+    
+    <LinearLayout
+        android:id="@+id/ansLayout"
+        android:layout_width="@dimen/hint_btn_min_width"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical" />
 
 </LinearLayout>

@@ -13,6 +13,7 @@
     <string name="hint_def_btn_A">Nitrogen</string>
     <string name="hint_def_btn_B">Water</string>
     <string name="hint_def_btn_C">H2S04</string>
+<<<<<<< HEAD
     <!--This area will be for stats strings-->
     <string name="Statistics">Statistics</string>
     <!--This section will be for main menu strings-->
@@ -22,5 +23,11 @@
 
 
 
+=======
+    <string name="hint_btn_def_txt">An Answer</string>
+    
+    <string name="hint_pass_toast">Correct! Here\'s your hint</string>
+    <string name="hint_fail_toast">Wrong! Sorry, try again</string>
+>>>>>>> 4ef77ee5552d62e10b1d2c9675d124a578859f5a
 
 </resources>
