@@ -3,7 +3,7 @@
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center|top"
+    android:gravity="left|top"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -24,10 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/new_game_spacer"/>
 
-    <LinearLayout
-        android:layout_width="186dp"
+    <RadioGroup
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:minWidth="@dimen/new_game_rb_width"
         android:orientation="vertical" >
 
         <RadioButton
@@ -42,7 +41,7 @@
             android:layout_height="wrap_content"
             android:text="@string/new_game_rb_scoring" />
 
-    </LinearLayout>
+    </RadioGroup>
 
     <Space
         android:layout_width="match_parent"
@@ -60,10 +59,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/new_game_spacer" />
     
-    <LinearLayout
-        android:layout_width="186dp"
+    <RadioGroup
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:minWidth="@dimen/new_game_rb_width"
         android:orientation="vertical" >
 
         <RadioButton
@@ -73,11 +71,11 @@
             android:text="@string/new_game_rb_easy" />
 
         <RadioButton
-            android:id="@+id/rbHard"
+            android:id="@+id/rbDifficult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/new_game_rb_difficult" />
 
-    </LinearLayout>
+    </RadioGroup>
 
 </LinearLayout>

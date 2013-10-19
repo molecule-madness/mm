@@ -14,29 +14,7 @@ public class MainMenu extends Activity {
 		
 		Intent intent = new Intent(this, NewGameActivity.class);
 		startActivity(intent);
-	}
-        Button startButton = (Button)findViewById(R.id.Start_button);
-        startButton.setOnClickListener(startListener); // Register the onClick listener with the implementation above
-
-        Button buttonStop = (Button)findViewById(R.id.buttonStop);
-        buttonStop.setOnClickListener(stopListener); // Register the onClick listener with the implementation above
     }
-
-    //Create an anonymous implementation of OnClickListener
-    private OnClickListener startListener = new OnClickListener() {
-        public void onClick(View v) {
-            Toast.makeText(TwoButtonApp.this, "The Start button was clicked.", Toast.LENGTH_LONG).show();
-        }
-    };
-
-    // Create an anonymous implementation of OnClickListener
-    private OnClickListener stopListener = new OnClickListener() {
-        public void onClick(View v) {
-            Log.d(logtag,"onClick() called - stop button");
-            Toast.makeText(TwoButtonApp.this, "The Stop button was clicked.", Toast.LENGTH_LONG).show();
-            Log.d(logtag,"onClick() ended - stop button");
-        }
-    };
 
     @Override
 	public boolean onCreateOptionsMenu(Menu menu) {

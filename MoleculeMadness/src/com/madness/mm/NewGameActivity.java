@@ -4,14 +4,26 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RadioButton;
 import android.support.v4.app.NavUtils;
 
 public class NewGameActivity extends Activity {
 
+	private RadioButton rbTimeAttack, rbScoring, rbEasy, rbDifficult;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_game);
+		
+		//@formatter:off
+		rbTimeAttack = (RadioButton)findViewById(R.id.rbTimeAttack);
+		rbScoring    = (RadioButton)findViewById(R.id.rbScoring   );
+		
+		rbEasy       = (RadioButton)findViewById(R.id.rbEasy      );
+		rbDifficult  = (RadioButton)findViewById(R.id.rbDifficult );
+		//@formatter:on
+		
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}

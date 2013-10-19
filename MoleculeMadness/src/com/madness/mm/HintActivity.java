@@ -50,6 +50,7 @@ public class HintActivity extends Activity implements HintFormattable {
 			final OrderedButton b = new OrderedButton(this, i);
 			b.setMinWidth(R.dimen.hint_btn_min_width);
 			b.setText(R.string.hint_btn_def_txt);
+			b.setHapticFeedbackEnabled(true);
 			
 			b.setOnClickListener(new View.OnClickListener() {
 				@Override
