@@ -6,5 +6,7 @@
     <dimen name="hint_question_text_size">20dp</dimen>
     <dimen name="hint_btn_min_width">150dip</dimen>
     <dimen name="hint_spacer">30dip</dimen>
+    <dimen name="new_game_spacer">15dip</dimen>
+    <dimen name="new_game_rb_width">200dip</dimen>
 
 </resources>
