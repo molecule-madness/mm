@@ -10,5 +10,6 @@
     <string name="hint_def_btn_A">Nitrogen</string>
     <string name="hint_def_btn_B">Water</string>
     <string name="hint_def_btn_C">H2S04</string>
+    <string name="hint_btn_def_txt">An Answer</string>
 
 </resources>
