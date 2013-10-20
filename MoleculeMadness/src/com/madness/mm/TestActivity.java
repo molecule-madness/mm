@@ -12,7 +12,7 @@ public class TestActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_test);
 		
-		Intent i = new Intent(getApplicationContext(), ReviewActivity.class);
+		Intent i = new Intent(getApplicationContext(), MainMenu.class);
 		startActivity(i);
 	}
 
