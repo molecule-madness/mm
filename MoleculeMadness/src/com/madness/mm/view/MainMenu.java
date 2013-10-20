@@ -1,4 +1,4 @@
-package com.madness.mm;
+package com.madness.mm.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-import com.madness.mm.model.Hint;
+import com.madness.mm.R;
+import com.madness.mm.Stats;
 
 public class MainMenu extends Activity {
 

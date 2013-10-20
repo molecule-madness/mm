@@ -1,4 +1,7 @@
-package com.madness.mm;
+package com.madness.mm.view;
+
+import com.madness.mm.Quiz;
+import com.madness.mm.R;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -34,7 +37,6 @@ public class NewGameActivity extends Activity {
 		boolean gameDiff = rbEasy.isChecked();
 		
 		Quiz quiz = new Quiz(gameType, gameDiff);
-        
 	}
 	
 	/**

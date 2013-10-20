@@ -1,4 +1,6 @@
-package com.madness.mm;
+package com.madness.mm.view;
+
+import com.madness.mm.R;
 
 import android.os.Bundle;
 import android.app.Activity;

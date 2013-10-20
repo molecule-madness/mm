@@ -1,9 +1,11 @@
-package com.madness.mm;
+package com.madness.mm.view;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.madness.mm.R;
 
 import android.os.Bundle;
 import android.app.ListActivity;

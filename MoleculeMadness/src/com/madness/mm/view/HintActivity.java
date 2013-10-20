@@ -1,5 +1,6 @@
-package com.madness.mm;
+package com.madness.mm.view;
 
+import com.madness.mm.R;
 import com.madness.mm.model.Hint;
 import com.madness.mm.model.HintFormattable;
 
