@@ -19,9 +19,9 @@ public class MainMenu extends Activity {
 		// will make a quiz when its clicked
 		start_Button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				Intent goto_Quiz_Selector = new Intent(getApplicationContext(),
-						Quiz.class);
-				startActivity(goto_Quiz_Selector);
+				Intent newGame = new Intent(getApplicationContext(),
+						NewGameActivity.class);
+				startActivity(newGame);
 			}
 		});
 
