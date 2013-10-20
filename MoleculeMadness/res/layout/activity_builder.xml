@@ -7,6 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="3"
         android:background="@color/builderBackground"
         android:orientation="horizontal" >
@@ -52,6 +53,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="4"
         android:orientation="horizontal" >
 
@@ -90,11 +92,13 @@
 
     <FrameLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="16" >
     </FrameLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="6"
         android:background="@color/builderBackground"
         android:orientation="horizontal" >

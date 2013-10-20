@@ -1,44 +1,69 @@
 package com.madness.mm.view;
 
 import com.madness.mm.R;
-import com.madness.mm.model.Quiz;
-
+import com.madness.mm.model.MolApp;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.support.v4.app.NavUtils;
 
 public class NewGameActivity extends Activity {
 
-	private RadioButton rbTimeAttack, rbScoring, rbEasy, rbDifficult;
-	
+	private RadioButton rbTimeAttack, rbEasy;
+	private RadioGroup rgGameType, rgGameDiff;
+
+	boolean typeSelected = false, diffSelected = false;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_game);
-		
+
 		//@formatter:off
 		rbTimeAttack = (RadioButton)findViewById(R.id.rbTimeAttack);
-		rbScoring    = (RadioButton)findViewById(R.id.rbScoring   );
-		
 		rbEasy       = (RadioButton)findViewById(R.id.rbEasy      );
-		rbDifficult  = (RadioButton)findViewById(R.id.rbDifficult );
 		//@formatter:on
-		
+
+		rgGameType = (RadioGroup) findViewById(R.id.rgGameType);
+		rgGameDiff = (RadioGroup) findViewById(R.id.rgGameDiff);
+
+		rgGameType.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				typeSelected = true;
+
+				miStart.setEnabled(typeSelected && diffSelected);
+			}
+		});
+
+		rgGameDiff.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				diffSelected = true;
+
+				miStart.setEnabled(typeSelected && diffSelected);
+			}
+		});
+
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
 
-	public void startGame(View view) {
+	public void startGame() {
 		boolean gameType = rbTimeAttack.isChecked();
 		boolean gameDiff = rbEasy.isChecked();
-		
-		Quiz quiz = new Quiz(gameType, gameDiff);
+
+		MolApp app = (MolApp) getApplication();
+		app.mkNewQuiz(gameType, gameDiff);
+
+		startActivity(new Intent(this, BuilderActivity.class));
 	}
-	
+
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */
@@ -47,15 +72,15 @@ public class NewGameActivity extends Activity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 	}
-	
+
 	private MenuItem miStart;
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.new_game_menu, menu);
 
 		miStart = menu.findItem(R.id.startGame);
-		
+
 		return true;
 	}
 
@@ -72,7 +97,12 @@ public class NewGameActivity extends Activity {
 			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
+
+		case R.id.startGame:
+			startGame();
+			break;
 		}
+
 		return super.onOptionsItemSelected(item);
 	}
 

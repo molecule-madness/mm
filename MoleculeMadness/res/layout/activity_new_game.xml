@@ -25,6 +25,7 @@
         android:layout_height="@dimen/new_game_spacer"/>
 
     <RadioGroup
+        android:id="@+id/rgGameType"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
@@ -60,6 +61,7 @@
         android:layout_height="@dimen/new_game_spacer" />
     
     <RadioGroup
+        android:id="@+id/rgGameDiff"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
