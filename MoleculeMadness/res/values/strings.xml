@@ -35,5 +35,15 @@
     
     
     <string name="review_menu_finish">Finish</string>
+    
+    <!-- This section will be for builder strings -->
+    <string name="submit">Submit</string>
+    <string name="hint">Hint</string>
+    <string name="trash">Trash</string>
+    <string name="available">Available Elements</string>
+    <string name="title_activity_builder">Builder</string>
+    
+    <!-- This section will be for molecule names -->
+	<string name="sulfuric">Build H2SO4</string>
 
 </resources>

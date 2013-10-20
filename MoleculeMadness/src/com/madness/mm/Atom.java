@@ -1,19 +1,16 @@
 package com.madness.mm;
 
-import android.graphics.Color;
-
 public class Atom {
 	
 	private int id;
 	private String name;
 	private String symbol;
-	private Color color;
+	private Atom[] bonds;
 	
-	public Atom(int id, String name, String symbol, Color color){
+	public Atom(int id, String name, String symbol){
 		this.id = id;
 		this.name = name;
 		this.symbol = symbol;
-		this.color = color;
 	}
 	
 	
@@ -52,19 +49,11 @@ public class Atom {
 		this.symbol = symbol;
 	}
 
-
-
-	public Color getColor() {
-		return color;
-	}
-
-
-
-	public void setColor(Color color) {
-		this.color = color;
-	}
-
-
+	//solver:
+	//somehow connect two atoms via the UI
+	//add those atoms to each other's bond arrays
+	//have hardcoded solutions put in
+	//maybe change this in the future
 
 	public void delete(){
 		//idk lol

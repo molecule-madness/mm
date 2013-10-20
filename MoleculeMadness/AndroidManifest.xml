@@ -45,6 +45,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name="com.madness.mm.BuilderActivity"
+            android:label="@string/title_activity_builder" >
+        </activity>
+        
     </application>
 
 </manifest>
