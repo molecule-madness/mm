@@ -11,36 +11,46 @@ import java.util.ArrayList;
 public class Quiz {
 
 	private Quiz state;
-    boolean difficulty;
-    boolean type;
-    ArrayList<Question> questions;
+	private boolean gameType;
+	private boolean gameDiff;
+	private ArrayList<Question> questions;
 
+	/*
+	 * if difficulty is true its easy else its hard if type is false its scoring
+	 * else its time attack
+	 */
+	public Quiz(boolean gameType, boolean gameDiff) {
+		this.gameType = gameType;
+		this.gameDiff = gameDiff;
 
-    /* if difficulty is true its easy else its hard
-     * if type is true its scoring else its time attack
-     */
-    public Quiz(boolean difficulty, boolean type){
-        this.type = type;
-        this.difficulty = difficulty;
-        questions = new ArrayList<Question>();
+		questions = new ArrayList<Question>();
+		
+		Question q1 = new Question("Build water");
+		q1.addBond("O_0", "H_0");
+		q1.addBond("O_0", "H_1");
+		questions.add(q1);
+		
+		Question q2 = new Question("Build gasseous Nitrogen");
+		q2.addBond("N_0", "N_1");
+		questions.add(q2);
 	}
 
-    public ArrayList<Question> getQuestions() {
-        return questions;
-    }
+	public ArrayList<Question> getQuestions() {
+		return questions;
+	}
 
-	public Memento create_Memento(){
-	    System.out.println("Creating the memento");
-        return new Memento(state);
-    }
+	public Memento create_Memento() {
+		System.out.println("Creating the memento");
+		return new Memento(state);
+	}
 
-    public void set_Memento(Quiz quiz){
-        System.out.println("Setting the memento");
-        state = quiz;
-    }
+	public void set_Memento(Quiz quiz) {
+		System.out.println("Setting the memento");
+		state = quiz;
+	}
 
-    public void restore_From_Memento(Memento m){
-        state = m.get_State();
-        System.out.println("restoring the state");
-    }
+	public void restore_From_Memento(Memento m) {
+		state = m.get_State();
+		System.out.println("restoring the state");
+	}
 }

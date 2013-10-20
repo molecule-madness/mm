@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RadioButton;
 import android.support.v4.app.NavUtils;
 
@@ -28,6 +29,14 @@ public class NewGameActivity extends Activity {
 		setupActionBar();
 	}
 
+	public void startGame(View view) {
+		boolean gameType = rbTimeAttack.isChecked();
+		boolean gameDiff = rbEasy.isChecked();
+		
+		Quiz quiz = new Quiz(gameType, gameDiff);
+        
+	}
+	
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */
@@ -36,13 +45,11 @@ public class NewGameActivity extends Activity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 	}
-
-	private Menu actionBar;
+	
 	private MenuItem miStart;
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		this.actionBar = menu;
 		getMenuInflater().inflate(R.menu.new_game_menu, menu);
 
 		miStart = menu.findItem(R.id.startGame);
