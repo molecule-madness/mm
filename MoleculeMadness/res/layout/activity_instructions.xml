@@ -30,5 +30,5 @@
         android:layout_gravity="center_horizontal"
         android:text="There are 2 game modes with 2 different levels of difficulty." />
 
-
+<!--this is not important-->
 </LinearLayout>
