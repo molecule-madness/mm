@@ -43,7 +43,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/instructions"
-        android:id="@+id/button3"
+        android:id="@+id/Instruction_Button"
         android:layout_marginBottom="56dp"
         android:layout_gravity="center_horizontal" />
 

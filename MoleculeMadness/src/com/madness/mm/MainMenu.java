@@ -1,5 +1,6 @@
 package com.madness.mm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
@@ -10,36 +11,45 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.madness.mm.model.Hint;
+
 public class MainMenu extends Activity {
 
-    private OrderedButton[] btns;
+
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
-<<<<<<< HEAD
+        Button start_Button = (Button)findViewById(R.id.Start_button);
 
-        // register the start game button with a listener
-        Button startButton = (Button)findViewById(R.id.Start_button);
-=======
-		
-		Intent intent = new Intent(this, NewGameActivity.class);
-		startActivity(intent);
->>>>>>> 0b6040b7807dba39826dd619860aed43f7ba0c98
+        // will make a quiz when its clicked
+        start_Button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+            }
+        });
+
+        Button stats_Button = (Button)findViewById(R.id.Stats_Button);
+        // will go to the stats page when clicked
+        stats_Button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+            }
+        });
+
+
+        Button instructions = (Button)findViewById(R.id.Instruction_Button);
+        // will go the instructions page when clicked
+        instructions.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent goto_Instructions = new Intent()
+                        startActivity(goto_Instructions);
+            }
+        });
     }
-
-    @Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main_menu, menu);
 		return true;
 	}
-
-        private class OrderedButton extends Button {
-            private int index;
-
-            public OrderedButton(Context context, int index) {
-                super(context);
-                this.index = index;
-                // TODO Auto-generated constructor stub
-            }
 }
