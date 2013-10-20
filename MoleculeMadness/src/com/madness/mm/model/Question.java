@@ -38,7 +38,7 @@ public class Question {
 		correct = false;
 	}
 
-	public String getQuestion() {
+	public String getInstruction() {
 		return this.instruction;
 	}
 
