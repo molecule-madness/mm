@@ -39,10 +39,10 @@ public class MainMenu extends Activity {
 
 
         Button instructions = (Button)findViewById(R.id.Instruction_Button);
-        // will go the instructions page when clicked
+        // will go the com.madness.mm.instructions page when clicked
         instructions.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent goto_Instructions = new Intent()
+                Intent goto_Instructions = new Intent();
                         startActivity(goto_Instructions);
             }
         });

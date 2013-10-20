@@ -30,6 +30,9 @@
             android:name="com.madness.mm.HintActivity"
             android:label="@string/title_activity_hint" >
         </activity>
+        <activity android:name="com.madness.mm.instructions"
+            android:label="Instructions"/>
+
     </application>
 
 </manifest>
