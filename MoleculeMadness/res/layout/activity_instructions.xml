@@ -4,10 +4,10 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/TextView1"
         android:layout_gravity="center_horizontal"
         android:text="Instuctions" />
 
@@ -16,17 +16,17 @@
         android:layout_height="30dp"
         android:layout_marginBottom="2dp" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/TextView1"
         android:layout_gravity="center_horizontal"
         android:text="Welcome to Molecule Madness" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
+        android:id="@+id/TextView1"
         android:layout_gravity="center_horizontal"
         android:text="There are 2 game modes with 2 different levels of difficulty." />
 
