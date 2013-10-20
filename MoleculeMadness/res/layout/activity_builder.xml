@@ -5,95 +5,33 @@
     android:orientation="vertical"
     tools:context=".BuilderActivity" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:background="@color/builderBackground"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:paddingTop="15dip"
-            android:text="Question 1/10" />
-
-        <ImageButton
-            android:id="@+id/imageButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/builderBackground"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:src="@drawable/ic_launcher" />
-
-        <Button
-            android:id="@+id/hintButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/builderBackground"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:text="@string/hint"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/builderBackground"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:text="@string/submit"
-            android:textSize="15sp" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="4"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:paddingTop="10dip"
-            android:text="@string/sulfuric" />
+    <FrameLayout
+        android:id="@+id/FrameLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
 
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:src="@drawable/ic_launcher" />
+            android:layout_gravity="center_vertical|left"
+            android:contentDescription="@string/builder_trash_can"
+            android:padding="10dip"
+            android:src="@drawable/ic_trash_can" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:text="00:00" />
-
-    </RelativeLayout>
+            android:layout_gravity="center_vertical|center"
+            android:padding="10dip"
+            android:text="@string/sulfuric" />
+    </FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="16" >
+        android:layout_weight="16.08" >
     </FrameLayout>
 
     <RelativeLayout
@@ -111,7 +49,6 @@
             android:layout_centerHorizontal="true"
             android:paddingTop="10dip"
             android:text="@string/available" />
-
     </RelativeLayout>
 
 </LinearLayout>

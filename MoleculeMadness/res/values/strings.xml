@@ -45,5 +45,7 @@
     
     <!-- This section will be for molecule names -->
 	<string name="sulfuric">Build H2SO4</string>
+	
+	<string name="builder_trash_can">Trash can</string>
 
 </resources>
