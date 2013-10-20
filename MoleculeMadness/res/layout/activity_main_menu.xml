@@ -1,47 +1,51 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainMenu" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="34dp"
-        android:text="Logo"
-
+        android:textSize="34sp"
+        android:text="@string/app_name"
         android:layout_marginTop="38dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/start"
         android:id="@+id/Start_button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_gravity="center_horizontal" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Statistics"
+        android:text="@string/Statistics"
         android:id="@+id/Stats_Button"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/button3"
-        android:layout_centerHorizontal="true" />
+        android:layout_gravity="center_horizontal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Instructions"
+        android:text="@string/instructions"
         android:id="@+id/button3"
-        android:layout_marginTop="26dp"
-        android:layout_below="@+id/Sta"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginBottom="56dp"
+        android:layout_gravity="center_horizontal" />
 
-</RelativeLayout>
+
+</LinearLayout>

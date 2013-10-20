@@ -2,41 +2,24 @@ package com.madness.mm;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
+import android.content.Context;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainMenu extends Activity {
 
-	@Override
+    private OrderedButton[] btns;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
-		
-		Intent intent = new Intent(this, NewGameActivity.class);
-		startActivity(intent);
-	}
+
+        // register the start game button with a listener
         Button startButton = (Button)findViewById(R.id.Start_button);
-        startButton.setOnClickListener(startListener); // Register the onClick listener with the implementation above
-
-        Button buttonStop = (Button)findViewById(R.id.buttonStop);
-        buttonStop.setOnClickListener(stopListener); // Register the onClick listener with the implementation above
     }
-
-    //Create an anonymous implementation of OnClickListener
-    private OnClickListener startListener = new OnClickListener() {
-        public void onClick(View v) {
-            Toast.makeText(TwoButtonApp.this, "The Start button was clicked.", Toast.LENGTH_LONG).show();
-        }
-    };
-
-    // Create an anonymous implementation of OnClickListener
-    private OnClickListener stopListener = new OnClickListener() {
-        public void onClick(View v) {
-            Log.d(logtag,"onClick() called - stop button");
-            Toast.makeText(TwoButtonApp.this, "The Stop button was clicked.", Toast.LENGTH_LONG).show();
-            Log.d(logtag,"onClick() ended - stop button");
-        }
-    };
 
     @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -45,4 +28,12 @@ public class MainMenu extends Activity {
 		return true;
 	}
 
+        private class OrderedButton extends Button {
+            private int index;
+
+            public OrderedButton(Context context, int index) {
+                super(context);
+                this.index = index;
+                // TODO Auto-generated constructor stub
+            }
 }
