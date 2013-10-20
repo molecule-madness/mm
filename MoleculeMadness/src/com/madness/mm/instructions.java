@@ -9,5 +9,6 @@ import android.os.Bundle;
 public class Instructions extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        System.out.println("Instructions that need to be added");
     }
 }

@@ -3,13 +3,10 @@ package com.madness.mm;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Context;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.madness.mm.model.Hint;
 
@@ -44,7 +41,7 @@ public class MainMenu extends Activity {
         // will go the com.madness.mm.instructions page when clicked
         instructions.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent goto_Instructions = new Intent(getApplicationContext(),instructions.class);
+                Intent goto_Instructions = new Intent(getApplicationContext(),Instructions.class);
                         startActivity(goto_Instructions);
             }
         });

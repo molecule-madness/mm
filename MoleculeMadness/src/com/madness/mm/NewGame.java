@@ -11,7 +11,5 @@ public class NewGame {
 
     public void start_Quiz(){
         Quiz quiz = new Quiz();
-        // not sure what to do after that
-        //TODO more things
     }
 }
