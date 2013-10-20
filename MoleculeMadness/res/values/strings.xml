@@ -32,5 +32,8 @@
     <string name="new_game_menu_start">Start</string>
     <string name="title_activity_review">Review Quiz</string>
     <string name="title_activity_test">TestActivity</string>
+    
+    
+    <string name="review_menu_finish">Finish</string>
 
 </resources>
