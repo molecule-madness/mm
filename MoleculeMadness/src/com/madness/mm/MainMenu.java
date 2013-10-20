@@ -16,9 +16,15 @@ public class MainMenu extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
+<<<<<<< HEAD
 
         // register the start game button with a listener
         Button startButton = (Button)findViewById(R.id.Start_button);
+=======
+		
+		Intent intent = new Intent(this, NewGameActivity.class);
+		startActivity(intent);
+>>>>>>> 0b6040b7807dba39826dd619860aed43f7ba0c98
     }
 
     @Override

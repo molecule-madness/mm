@@ -23,17 +23,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.madness.mm.HintActivity"
-            android:label="@string/title_activity_hint" >
-            
+            android:name="com.madness.mm.NewGameActivity"
+            android:label="@string/title_activity_new_game" >
         </activity>
         <activity
-            android:name="com.madness.mm.NewGameActivity"
-            android:label="@string/title_activity_new_game"
-            android:parentActivityName="com.madness.mm.MainMenu" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.madness.mm.MainMenu" />
+            android:name="com.madness.mm.HintActivity"
+            android:label="@string/title_activity_hint" >
         </activity>
     </application>
 
