@@ -1,7 +1,7 @@
 package com.madness.mm.view;
 
-import com.madness.mm.Quiz;
 import com.madness.mm.R;
+import com.madness.mm.model.Quiz;
 
 import android.os.Bundle;
 import android.app.Activity;

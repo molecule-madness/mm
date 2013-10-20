@@ -1,5 +1,7 @@
 package com.madness.mm;
 
+import com.madness.mm.model.Quiz;
+
 /**
  * @author Alex Kahn
  * @className Memento.java

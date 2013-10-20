@@ -1,6 +1,8 @@
-package com.madness.mm;
+package com.madness.mm.model;
 
 import java.util.ArrayList;
+
+import com.madness.mm.Memento;
 
 /* @author Alex Kahn
  * @className Quiz.java
