@@ -32,6 +32,7 @@ public class MainMenu extends Activity {
 				Intent goto_Stats = new Intent(getApplicationContext(),
 						Stats.class);
 				startActivity(goto_Stats);
+				// Perform action on click
 			}
 		});
 

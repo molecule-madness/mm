@@ -16,11 +16,6 @@
         <activity
             android:name="com.madness.mm.MainMenu"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.madness.mm.NewGameActivity"
@@ -42,7 +37,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.madness.mm.MainMenu" />
         </activity>
-
+        <activity
+            android:name="com.madness.mm.TestActivity"
+            android:label="@string/title_activity_test" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

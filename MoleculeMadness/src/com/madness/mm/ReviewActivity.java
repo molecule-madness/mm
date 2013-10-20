@@ -10,6 +10,10 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
 import android.support.v4.app.NavUtils;
@@ -38,6 +42,14 @@ public class ReviewActivity extends ListActivity {
 		ListAdapter adapter = new SimpleAdapter(c, data,
 				R.layout.custom_list_row, from, to);
 		setListAdapter(adapter);
+
+		this.getListView().setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> l, View v, int pos, long id) {
+				// TODO Auto-generated method stub
+
+			}
+		});
 
 		// Show the Up button in the action bar.
 		setupActionBar();
