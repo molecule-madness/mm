@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--common string that all screen will use-->
+    <!-- common string that all screen will use -->
     <string name="main_menu">Main Menu</string>
     <string name="app_name">Molecule Madness</string>
     <string name="action_settings">Settings</string>
-    <!--String for the hint question-->
+    <!-- String for the hint question -->
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_hint">Hint</string>
     <string name="hint_instruction">Answer this to receive a hint!</string>
@@ -13,9 +13,9 @@
     <string name="hint_def_btn_A">Nitrogen</string>
     <string name="hint_def_btn_B">Water</string>
     <string name="hint_def_btn_C">H2S04</string>
-    <!--This area will be for stats strings-->
+    <!-- This area will be for stats strings -->
     <string name="Statistics">Statistics</string>
-    <!--This section will be for main menu strings-->
+    <!-- This section will be for main menu strings -->
     <string name="start">Start Game</string>
     <string name="hint_btn_def_txt">An Answer</string>
     <string name="hint_pass_toast">Correct! Here\'s your hint</string>
@@ -28,6 +28,6 @@
     <string name="new_game_rb_easy">Easy</string>
     <string name="new_game_rb_difficult">Difficult</string>
     <string name="new_game_menu_start">Start</string>
-
+    <string name="title_activity_review">Review Quiz</string>
 
 </resources>

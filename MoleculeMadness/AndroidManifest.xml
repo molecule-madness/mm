@@ -30,6 +30,14 @@
             android:name="com.madness.mm.HintActivity"
             android:label="@string/title_activity_hint" >
         </activity>
+        <activity
+            android:name="com.madness.mm.ReviewActivity"
+            android:label="@string/title_activity_review"
+            android:parentActivityName="com.madness.mm.MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.madness.mm.MainMenu" />
+        </activity>
     </application>
 
 </manifest>

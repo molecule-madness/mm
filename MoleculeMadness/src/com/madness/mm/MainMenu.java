@@ -12,7 +12,7 @@ public class MainMenu extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
 		
-		Intent intent = new Intent(this, NewGameActivity.class);
+		Intent intent = new Intent(this, ReviewActivity.class);
 		startActivity(intent);
     }
 
