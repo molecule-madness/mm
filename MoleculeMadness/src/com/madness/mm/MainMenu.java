@@ -25,7 +25,8 @@ public class MainMenu extends Activity {
         // will make a quiz when its clicked
         start_Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                Intent goto_Quiz_Selector = new Intent(getApplicationContext(), Quiz.class);
+                startActivity(goto_Quiz_Selector);
             }
         });
 
@@ -33,7 +34,8 @@ public class MainMenu extends Activity {
         // will go to the stats page when clicked
         stats_Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Perform action on click
+                Intent goto_Stats = new Intent(getApplicationContext(), Stats.class);
+                startActivity(goto_Stats);
             }
         });
 
@@ -42,7 +44,7 @@ public class MainMenu extends Activity {
         // will go the com.madness.mm.instructions page when clicked
         instructions.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent goto_Instructions = new Intent();
+                Intent goto_Instructions = new Intent(getApplicationContext(),instructions.class);
                         startActivity(goto_Instructions);
             }
         });
