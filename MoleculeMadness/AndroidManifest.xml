@@ -30,9 +30,20 @@
             android:name="com.madness.mm.HintActivity"
             android:label="@string/title_activity_hint" >
         </activity>
+<<<<<<< HEAD
         <activity android:name="com.madness.mm.instructions"
             android:label="Instructions"/>
 
+=======
+        <activity
+            android:name="com.madness.mm.ReviewActivity"
+            android:label="@string/title_activity_review"
+            android:parentActivityName="com.madness.mm.MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.madness.mm.MainMenu" />
+        </activity>
+>>>>>>> 8e9651c77859855767418211ab2617ebfb5721db
     </application>
 
 </manifest>

@@ -32,5 +32,6 @@
     <string name="new_game_rb_difficult">Difficult</string>
     <string name="new_game_menu_start">Start</string>
 
+    <string name="title_activity_review">Review Quiz</string>
 
 </resources>
