@@ -31,7 +31,7 @@
             android:label="@string/title_activity_hint" >
         </activity>
 
-        <activity android:name="com.madness.mm.instructions"
+        <activity android:name="com.madness.mm.Instructions"
             android:label="Instructions"/>
 
         <activity
