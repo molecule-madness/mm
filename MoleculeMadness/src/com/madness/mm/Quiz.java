@@ -1,4 +1,7 @@
 package com.madness.mm;
+
+import java.util.ArrayList;
+
 /* @author Alex Kahn
  * @className Quiz.java
  * @date 10/18/2013
@@ -8,10 +11,23 @@ package com.madness.mm;
 public class Quiz {
 
 	private Quiz state;
+    boolean difficulty;
+    boolean type;
+    ArrayList<Question> questions;
 
-    public Quiz(){
 
+    /* if difficulty is true its easy else its hard
+     * if type is true its scoring else its time attack
+     */
+    public Quiz(boolean difficulty, boolean type){
+        this.type = type;
+        this.difficulty = difficulty;
+        questions = new ArrayList<Question>();
 	}
+
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
 
 	public Memento create_Memento(){
 	    System.out.println("Creating the memento");
