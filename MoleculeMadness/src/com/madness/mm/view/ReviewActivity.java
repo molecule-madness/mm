@@ -6,10 +6,14 @@ import java.util.List;
 import java.util.Map;
 
 import com.madness.mm.R;
+import com.madness.mm.model.MolApp;
+import com.madness.mm.model.Question;
+import com.madness.mm.model.Quiz;
 
 import android.os.Bundle;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,16 +26,22 @@ import android.support.v4.app.NavUtils;
 
 public class ReviewActivity extends ListActivity {
 
+	private MolApp app;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// setContentView(R.layout.activity_review);
+
+		app = (MolApp) getApplication();
+
+		Quiz quiz = app.getQuiz();
 
 		List<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
-		for (int i = 0; i < 12; i++) {
+		for (Question q : quiz.getQuestions()) {
 			HashMap<String, Object> row = new HashMap<String, Object>();
-			row.put("row1", String.format("Question %d", i + 1));
-			row.put("row2", R.drawable.ic_correct_q);
+			row.put("row1", q.getInstruction());
+			row.put("row2", q.getGrade() ? R.drawable.ic_correct_q
+					: R.drawable.ic_incorrect_q);
 
 			data.add(row);
 		}
@@ -86,6 +96,9 @@ public class ReviewActivity extends ListActivity {
 			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
+			
+		case R.id.finish_review:
+			startActivity(new Intent(this, MainMenu.class));
 		}
 		return super.onOptionsItemSelected(item);
 	}

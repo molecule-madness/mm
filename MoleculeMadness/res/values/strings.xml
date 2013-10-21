@@ -47,5 +47,12 @@
 	<string name="sulfuric">Build H2SO4</string>
 	
 	<string name="builder_trash_can">Trash can</string>
+	
+	
+	<string name="drawer_open">Drawer open</string>
+	<string name="drawer_close">Drawer close</string>
+	
+	<string name="builder_toast_correct">You got it right!</string>
+	<string name="builder_toast_wrong">Sorry, you got it wrong!</string>
 
 </resources>

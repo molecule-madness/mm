@@ -68,4 +68,12 @@ public class Question {
 			return this.bondee;
 		}
 	}
+	
+	public void grade(boolean correct) {
+		this.correct = correct;
+	}
+	
+	public boolean getGrade() {
+		return correct;
+	}
 }

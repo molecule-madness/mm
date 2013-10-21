@@ -1,6 +1,8 @@
 package com.madness.mm.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 import com.madness.mm.Memento;
 
@@ -16,7 +18,9 @@ public class Quiz {
 	private boolean gameType;
 	private boolean gameDiff;
 	private ArrayList<Question> questions;
-	
+
+	private HashSet<Question> questionsLeft;
+
 	private Integer qPtr;
 
 	/*
@@ -28,27 +32,48 @@ public class Quiz {
 		this.gameDiff = gameDiff;
 
 		questions = new ArrayList<Question>();
-		qPtr = 0;
-		
+		qPtr = -1;
+
 		Question q1 = new Question("Build Water");
 		q1.addBond("O_0", "H_0");
 		q1.addBond("O_0", "H_1");
 		questions.add(q1);
-		
+
 		Question q2 = new Question("Build Gasseous Nitrogen");
 		q2.addBond("N_0", "N_1");
 		questions.add(q2);
+
+		questionsLeft = new HashSet<Question>();
+		questionsLeft.addAll(questions);
 	}
-	
-	public Question getQuestion() {
-		return questions.get(0);
+
+	public Question getNextQuestion() {
+		return questions.get(++qPtr);
+	}
+
+	public void workingOn(int qPtr) {
+		this.qPtr = qPtr;
+	}
+
+	public Question getCurQuestion(int index) {
+		this.qPtr = index;
+		return questions.get(index);
 	}
 	
 	public Integer getQuestionNum() {
 		return qPtr + 1;
 	}
 
-	public ArrayList<Question> getQuestions() {
+	public List<String> getQsByInstruction() {
+		ArrayList<String> res = new ArrayList<String>();
+		for (Question q : questions) {
+			res.add(q.getInstruction());
+		}
+
+		return res;
+	}
+
+	public List<Question> getQuestions() {
 		return questions;
 	}
 
@@ -65,5 +90,19 @@ public class Quiz {
 	public void restore_From_Memento(Memento m) {
 		state = m.get_State();
 		System.out.println("restoring the state");
+	}
+
+	public void answerQuestion(boolean correct) {
+		Question q = questions.get(qPtr);
+
+		q.grade(correct);
+
+		if (correct) {
+			questionsLeft.remove(q);
+		}
+	}
+
+	public boolean anyLeft() {
+		return questionsLeft.size() > 0;
 	}
 }
