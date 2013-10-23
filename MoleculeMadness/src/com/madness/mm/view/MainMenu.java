@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.madness.mm.R;
-import com.madness.mm.Stats;
 
 public class MainMenu extends Activity {
 

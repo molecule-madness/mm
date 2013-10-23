@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import com.madness.mm.Memento;
-
 /* @author Alex Kahn
  * @className Quiz.java
  * @date 10/18/2013

@@ -1,4 +1,4 @@
-package com.madness.mm;
+package com.madness.mm.model;
 
 import android.app.Activity;
 import android.os.Bundle;

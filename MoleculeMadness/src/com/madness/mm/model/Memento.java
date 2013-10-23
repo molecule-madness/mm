@@ -1,4 +1,4 @@
-package com.madness.mm;
+package com.madness.mm.model;
 
 import com.madness.mm.model.Quiz;
 
