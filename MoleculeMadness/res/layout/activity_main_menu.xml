@@ -20,7 +20,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/start"
-        android:id="@+id/Start_button"
+        android:id="@+id/main_btn_start"
         android:layout_gravity="center_horizontal" />
 
     <Space
@@ -31,7 +31,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/Statistics"
-        android:id="@+id/Stats_Button"
+        android:id="@+id/main_btn_stats"
         android:layout_gravity="center_horizontal" />
 
     <Space
@@ -43,7 +43,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/instructions"
-        android:id="@+id/Instruction_Button"
+        android:id="@+id/main_btn_instructions"
         android:layout_marginBottom="56dp"
         android:layout_gravity="center_horizontal" />
 

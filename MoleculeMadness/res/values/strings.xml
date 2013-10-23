@@ -32,27 +32,22 @@
     <string name="new_game_menu_start">Start</string>
     <string name="title_activity_review">Review Quiz</string>
     <string name="title_activity_test">TestActivity</string>
-    
-    
     <string name="review_menu_finish">Finish</string>
-    
+
     <!-- This section will be for builder strings -->
     <string name="submit">Submit</string>
     <string name="hint">Hint</string>
     <string name="trash">Trash</string>
     <string name="available">Available Elements</string>
     <string name="title_activity_builder">Builder</string>
-    
+
     <!-- This section will be for molecule names -->
-	<string name="sulfuric">Build H2SO4</string>
-	
-	<string name="builder_trash_can">Trash can</string>
-	
-	
-	<string name="drawer_open">Drawer open</string>
-	<string name="drawer_close">Drawer close</string>
-	
-	<string name="builder_toast_correct">You got it right!</string>
-	<string name="builder_toast_wrong">Sorry, you got it wrong!</string>
+    <string name="sulfuric">Build H2SO4</string>
+    <string name="builder_trash_can">Trash can</string>
+    <string name="drawer_open">Drawer open</string>
+    <string name="drawer_close">Drawer close</string>
+    <string name="builder_toast_correct">You got it right!</string>
+    <string name="builder_toast_wrong">Sorry, you got it wrong!</string>
+    <string name="title_activity_stats">StatsActivity</string>
 
 </resources>

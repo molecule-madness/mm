@@ -23,17 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="com.madness.mm.view.NewGameActivity"
-            android:label="@string/title_activity_new_game" 
-            android:parentActivityName="com.madness.mm.view.MainMenu" > 
+            android:label="@string/title_activity_new_game"
+            android:parentActivityName="com.madness.mm.view.MainMenu" >
+
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.madness.mm.view.MainMenu" />
         </activity>
-        
         <activity
             android:name="com.madness.mm.view.HintActivity"
             android:label="@string/title_activity_hint"
@@ -42,16 +41,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.madness.mm.view.BuilderActivity" />
         </activity>
-        
         <activity
             android:name="com.madness.mm.view.Instructions"
-            android:label="Instructions" 
-            android:parentActivityName="com.madness.mm.view.MainMenu">
+            android:label="Instructions"
+            android:parentActivityName="com.madness.mm.view.MainMenu" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.madness.mm.view.MainMenu" />
         </activity>
-        
         <activity
             android:name="com.madness.mm.view.ReviewActivity"
             android:label="@string/title_activity_review"
@@ -60,17 +57,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.madness.mm.view.MainMenu" />
         </activity>
-        
         <activity
             android:name="com.madness.mm.view.TestActivity"
             android:label="@string/title_activity_test" >
         </activity>
-        
         <activity
             android:name="com.madness.mm.view.BuilderActivity"
             android:label="@string/title_activity_builder" >
         </activity>
-        
+        <activity
+            android:name="com.madness.mm.StatsActivity"
+            android:label="@string/title_activity_stats"
+            android:parentActivityName="com.madness.mm.view.MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.madness.mm.view.MainMenu" />
+        </activity>
     </application>
 
 </manifest>

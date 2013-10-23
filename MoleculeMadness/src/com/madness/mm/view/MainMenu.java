@@ -8,46 +8,49 @@ import android.view.View;
 import android.widget.Button;
 
 import com.madness.mm.R;
+import com.madness.mm.StatsActivity;
 
+/**
+ * This activity is the home screen for the Molecule Madness game. It has
+ * options to launch a new game, view statistics, and view instructions.
+ * 
+ * @author Steve
+ */
 public class MainMenu extends Activity {
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
-		Button start_Button = (Button) findViewById(R.id.Start_button);
 
-		// will make a quiz when its clicked
-		start_Button.setOnClickListener(new View.OnClickListener() {
+		Button btnStart = (Button) findViewById(R.id.main_btn_start);
+
+		// go to the new game activity
+		btnStart.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				Intent newGame = new Intent(MainMenu.this,
-						NewGameActivity.class);
-				startActivity(newGame);
+				startActivity(new Intent(MainMenu.this, NewGameActivity.class));
 			}
 		});
 
-		Button stats_Button = (Button) findViewById(R.id.Stats_Button);
-		// will go to the stats page when clicked
-		stats_Button.setOnClickListener(new View.OnClickListener() {
+		Button btnStats = (Button) findViewById(R.id.main_btn_stats);
+
+		// go to the statistics activity
+		btnStats.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				//Intent goto_Stats = new Intent(MainMenu.this, Stats.class);
-				//startActivity(goto_Stats);
-				// Perform action on click
+				startActivity(new Intent(MainMenu.this, StatsActivity.class));
 			}
 		});
 
-		Button instructions = (Button) findViewById(R.id.Instruction_Button);
-		// will go the com.madness.mm.instructions page when clicked
+		Button instructions = (Button) findViewById(R.id.main_btn_instructions);
+
+		// go to the instructions activity
 		instructions.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				Intent goto_Instructions = new Intent(MainMenu.this,
-						Instructions.class);
-				startActivity(goto_Instructions);
+				startActivity(new Intent(MainMenu.this, Instructions.class));
 			}
 		});
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main_menu, menu);
 		return true;
 	}
