@@ -25,13 +25,13 @@
         android:layout_height="@dimen/new_game_spacer"/>
 
     <RadioGroup
-        android:id="@+id/rgGameType"
+        android:id="@+id/new_game_rg_game_type"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
         <RadioButton
-            android:id="@+id/rbTimeAttack"
+            android:id="@+id/new_game_rb_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/new_game_rb_time_attack" />
@@ -61,13 +61,13 @@
         android:layout_height="@dimen/new_game_spacer" />
     
     <RadioGroup
-        android:id="@+id/rgGameDiff"
+        android:id="@+id/new_game_rg_game_diff"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
         <RadioButton
-            android:id="@+id/rbEasy"
+            android:id="@+id/new_game_rb_easy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/new_game_rb_easy" />

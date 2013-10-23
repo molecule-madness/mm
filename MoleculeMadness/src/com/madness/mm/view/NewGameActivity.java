@@ -12,11 +12,28 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.support.v4.app.NavUtils;
 
+/**
+ * The new game activity provides options for configuring and launching a new
+ * Molecule Madness game instance
+ * 
+ * @author Steve
+ */
 public class NewGameActivity extends Activity {
 
-	private RadioButton rbTimeAttack, rbEasy;
-	private RadioGroup rgGameType, rgGameDiff;
+	/**
+	 * RadioButtons representing TRUE for their respective property
+	 */
+	private RadioButton rbTime, rbEasy;
 
+	/**
+	 * RadioGroups holding the boolean option for game type and difficulty
+	 */
+	private RadioGroup rgGame, rgDiff;
+
+	/**
+	 * These booleans are TRUE when any option in their respective RadioGroup
+	 * has been chosen
+	 */
 	boolean typeSelected = false, diffSelected = false;
 
 	@Override
@@ -24,28 +41,28 @@ public class NewGameActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_game);
 
-		//@formatter:off
-		rbTimeAttack = (RadioButton)findViewById(R.id.rbTimeAttack);
-		rbEasy       = (RadioButton)findViewById(R.id.rbEasy      );
-		//@formatter:on
+		rbTime = (RadioButton) findViewById(R.id.new_game_rb_time);
+		rbEasy = (RadioButton) findViewById(R.id.new_game_rb_easy);
 
-		rgGameType = (RadioGroup) findViewById(R.id.rgGameType);
-		rgGameDiff = (RadioGroup) findViewById(R.id.rgGameDiff);
+		rgGame = (RadioGroup) findViewById(R.id.new_game_rg_game_type);
+		rgDiff = (RadioGroup) findViewById(R.id.new_game_rg_game_diff);
 
-		rgGameType.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+		// set a ChangeListener on the game type radio group; when any option in
+		// that group is selected, update the enabled state of the start button
+		rgGame.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				// a game type has been selected
 				typeSelected = true;
-
 				miStart.setEnabled(typeSelected && diffSelected);
 			}
 		});
 
-		rgGameDiff.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+		rgDiff.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				// a difficulty has been selected
 				diffSelected = true;
-
 				miStart.setEnabled(typeSelected && diffSelected);
 			}
 		});
@@ -54,10 +71,14 @@ public class NewGameActivity extends Activity {
 		setupActionBar();
 	}
 
+	/**
+	 * Start a new game given the user's configuration
+	 */
 	public void startGame() {
-		boolean gameType = rbTimeAttack.isChecked();
+		boolean gameType = rbTime.isChecked();
 		boolean gameDiff = rbEasy.isChecked();
 
+		// create a new quiz instance given the parameters
 		MolApp app = (MolApp) getApplication();
 		app.mkNewQuiz(gameType, gameDiff);
 
@@ -68,11 +89,13 @@ public class NewGameActivity extends Activity {
 	 * Set up the {@link android.app.ActionBar}.
 	 */
 	private void setupActionBar() {
-
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-
 	}
 
+	
+	/**
+	 * The start button in the ActionBar
+	 */
 	private MenuItem miStart;
 
 	@Override
@@ -80,7 +103,6 @@ public class NewGameActivity extends Activity {
 		getMenuInflater().inflate(R.menu.new_game_menu, menu);
 
 		miStart = menu.findItem(R.id.startGame);
-
 		return true;
 	}
 
@@ -88,13 +110,6 @@ public class NewGameActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// This ID represents the Home or Up button. In the case of this
-			// activity, the Up button is shown. Use NavUtils to allow users
-			// to navigate up one level in the application structure. For
-			// more details, see the Navigation pattern on Android Design:
-			//
-			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
-			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 
@@ -105,5 +120,4 @@ public class NewGameActivity extends Activity {
 
 		return super.onOptionsItemSelected(item);
 	}
-
 }
