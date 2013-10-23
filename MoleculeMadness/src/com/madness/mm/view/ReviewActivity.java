@@ -17,15 +17,24 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
 import android.support.v4.app.NavUtils;
 
+/**
+ * The review activity allows the user to see a listing of questions marked as
+ * either correct or incorrect. The user may select a question to review it
+ * 
+ * @author Steve
+ * 
+ */
 public class ReviewActivity extends ListActivity {
 
+	/**
+	 * The master domain object, also known as global state
+	 */
 	private MolApp app;
 
 	@Override
@@ -96,9 +105,9 @@ public class ReviewActivity extends ListActivity {
 			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
-			
+
 		case R.id.finish_review:
-			startActivity(new Intent(this, MainMenu.class));
+			startActivity(new Intent(this, MainMenuActivity.class));
 		}
 		return super.onOptionsItemSelected(item);
 	}
