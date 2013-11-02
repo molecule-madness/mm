@@ -3,8 +3,6 @@ package com.madness.mm.view;
 import com.madness.mm.R;
 import com.madness.mm.model.MolApp;
 import com.madness.mm.model.Question;
-import com.madness.mm.model.Quiz;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;

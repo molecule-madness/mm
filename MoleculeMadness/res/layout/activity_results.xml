@@ -40,21 +40,20 @@
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:text="Main Menu"
-        android:id="@+id/button"
+        android:id="@+id/results_btn_main"
         android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/results_btn_review"
         android:layout_gravity="center_horizontal"
         android:text="Review" />
 
     <Button
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
+        android:id="@+id/results_btn_stats"
         android:layout_gravity="center_horizontal"
-        android:text="Stats"
-        android:layout_marginLeft="-3dp" />
+        android:text="Stats" />
 </LinearLayout>
