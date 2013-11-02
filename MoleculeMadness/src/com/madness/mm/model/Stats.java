@@ -11,11 +11,8 @@ import java.util.Date;
  * @classDescription- This class will graph the past scores of the user and
  * perform other analytic functions
  */
-public class Stats extends Activity {
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
+public class Stats{
+ 
     // will make a line graph for the just the scores
     public void make_Graph(int[] scores){
 
