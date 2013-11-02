@@ -58,10 +58,6 @@
                 android:value="com.madness.mm.view.MainMenu" />
         </activity>
         <activity
-            android:name="com.madness.mm.view.TestActivity"
-            android:label="@string/title_activity_test" >
-        </activity>
-        <activity
             android:name="com.madness.mm.view.BuilderActivity"
             android:label="@string/title_activity_builder" >
         </activity>
