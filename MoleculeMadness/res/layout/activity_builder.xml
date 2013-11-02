@@ -32,7 +32,7 @@
                 android:padding="10dip"
                 android:text="@string/sulfuric" />
         </FrameLayout>
-
+        
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,19 +60,37 @@
                 android:orientation="horizontal"
                 android:padding="10dip" >
 
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ring" />
+                    android:background="@drawable/ring"
+                    android:gravity="center"
+                    android:text="O"
+                    android:textSize="20sp" />
 
                 <Space
                     android:layout_width="20dip"
                     android:layout_height="wrap_content" />
 
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ring2" />
+                    android:background="@drawable/ring2"
+                    android:gravity="center"
+                    android:text="H"
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="20dip"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ring2"
+                    android:gravity="center"
+                    android:text="H"
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -92,8 +110,7 @@
                 android:layout_centerHorizontal="true"
                 android:paddingTop="10dip"
                 android:text="@string/available" />
-        </RelativeLayout>
-        -->
+        </RelativeLayout>-->
     </LinearLayout>
 
     <ListView
