@@ -139,7 +139,7 @@ public class BuilderActivity extends Activity {
 		if (app.getQuiz().anyLeft()) {
 			fieldQuestion(app.getQuiz().getNextQuestion());
 		} else {
-			startActivity(new Intent(this, ReviewActivity.class));
+			startActivity(new Intent(this, ResultsActivity.class));
 		}
 	}
 

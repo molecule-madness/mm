@@ -11,23 +11,24 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="@dimen/hint_spacer"/>
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/score"
         android:layout_gravity="center_horizontal"
-        android:text="Actual Score/Total Score" />
-
+        android:textSize="34sp"
+        android:text="Lorum Ipsum" />
+<!-- 
     <Space
         android:layout_width="match_parent"
         android:layout_height="@dimen/hint_spacer"/>
-
-    <EditText
+-->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
         android:layout_gravity="center_horizontal"
-        android:text="Score" />
+        android:textSize="24sp"
+        android:text="@string/score" />
 
     <Space
         android:layout_width="match_parent"
@@ -39,7 +40,7 @@
     <Button
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="Main Menu"
+        android:text="@string/main_menu"
         android:id="@+id/results_btn_main"
         android:layout_gravity="center_horizontal" />
 
@@ -48,12 +49,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/results_btn_review"
         android:layout_gravity="center_horizontal"
-        android:text="Review" />
+        android:text="@string/title_activity_review" />
 
     <Button
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:id="@+id/results_btn_stats"
         android:layout_gravity="center_horizontal"
-        android:text="Stats" />
+        android:text="@string/Statistics" />
 </LinearLayout>
