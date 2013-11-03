@@ -2,21 +2,18 @@ package com.madness.mm.view;
 
 import java.util.List;
 
-import com.madness.mm.R;
-import com.madness.mm.R.layout;
-import com.madness.mm.R.menu;
-import com.madness.mm.model.MolApp;
-import com.madness.mm.model.Question;
-import com.madness.mm.model.Quiz;
-import com.madness.mm.StatsActivity;
-
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.madness.mm.R;
+import com.madness.mm.model.MolApp;
+import com.madness.mm.model.Question;
+import com.madness.mm.model.Quiz;
 
 public class ResultsActivity extends Activity {
 	
