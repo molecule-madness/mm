@@ -1,7 +1,6 @@
 package com.madness.mm.model;
 
-import android.app.Activity;
-import android.os.Bundle;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -9,24 +8,70 @@ import java.util.Date;
  * @className Stats.java
  * @date 10/18/2013
  * @classDescription- This class will graph the past scores of the user and
- * perform other analytic functions
+ *                    perform other analytic functions
  */
-public class Stats extends Activity {
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+public class Stats {
 
-    // will make a line graph for the just the scores
-    public void make_Graph(int[] scores){
+	ArrayList<Integer> scores = new ArrayList<Integer>();
 
-    }
+	// will make a line graph for the just the scores
+	public void make_Graph(int[] scores) {
 
-    // we need to start the timer and then end it and look at the milliseconds
-    public void make_Graph_TimeAttack(Date[] times){
+	}
 
-    }
-    // This menu will display other stats like medians, means, all time highs, lows etc
-    public void dispInfo(){
+	// we need to start the timer and then end it and look at the milliseconds
+	public void make_Graph_TimeAttack(Date[] times) {
 
-    }
+	}
+
+	/*
+	 * computes the average of an arraylist of ints
+	 */
+	public double computeAverage(ArrayList<Integer> scores) {
+		double average = 0;
+		int sum = 0;
+		for (Integer grade : scores) {
+			sum += grade;
+		}
+		average = sum / scores.size();
+		return average;
+	}
+
+	/*
+	 * grabs the first element of the array if its not empty and then compares
+	 * it to every element in the array if the compared to element is less than
+	 * the first one grabbed it sets it equal
+	 */
+	public int findLowestScore(ArrayList<Integer> scores) {
+		if (!scores.isEmpty()) {
+			int temp = scores.get(0);
+			for (Integer grade : scores) {
+				if (grade < temp) {
+					temp = grade;
+				}
+			}
+			return temp;
+		}
+		System.out.println("There are no scores");
+		return 0;
+	}
+
+	/*
+	 * grabs the first element of the array if its not empty and then compares
+	 * it to every element in the array if the compared to element is greater than
+	 * the first one grabbed it sets it equal
+	 */
+	public int findHighScore(ArrayList<Integer> scores) {
+		if (!scores.isEmpty()) {
+			int temp = scores.get(0);
+			for (Integer grade : scores) {
+				if (grade > temp) {
+					temp = grade;
+				}
+			}
+			return temp;
+		}
+		System.out.println("There are no scores");
+		return 0;
+	}
 }

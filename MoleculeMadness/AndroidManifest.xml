@@ -69,6 +69,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.madness.mm.view.MainMenu" />
         </activity>
+        <activity
+            android:name="com.madness.mm.view.ResultsActivity"
+            android:label="@string/title_activity_results" >
+        </activity>
     </application>
 
 </manifest>

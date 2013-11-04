@@ -49,5 +49,9 @@
     <string name="builder_toast_correct">You got it right!</string>
     <string name="builder_toast_wrong">Sorry, you got it wrong!</string>
     <string name="title_activity_stats">StatsActivity</string>
+    <string name="title_activity_results">Results</string>
+    
+    <!-- This section will be for the results screen strings -->
+    <string name="score">Score</string>
 
 </resources>

@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/TextView1"
+        android:id="@+id/Instructions"
         android:layout_gravity="center_horizontal"
         android:text="Instuctions" />
 
@@ -19,16 +19,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/TextView1"
+        android:id="@+id/Title"
         android:layout_gravity="center_horizontal"
-        android:text="Welcome to Molecule Madness" />
-
+        android:text="Welcome to Molecule Madness"/>
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/TextView1"
+        android:id="@+id/startlist"
         android:layout_gravity="center_horizontal"
-        android:text="There are 2 game modes with 2 different levels of difficulty." />
-
-<!--this is not important-->
+        android:text="There are 2 kinds of game modes that you can pick from when you start.  
+        \nYou can either pick from Time Attack where you are timed as to how fast you can finish the quiz or Normal mode where there is no time.  
+        \nThere are also 2 levels of difficuly for the quiz.  You can pick from novice which is meant for someone still in middle school or intermediate which is meant for a frehsmen in highschool.
+        \n You can build molecules by grabbing them from the dock at the bottom of each questions and drag them out into the staging area.  From there you can add bonds and connect them together by doing something something
+        \n If you get stuck and can't figure out how to build the molecule then you can hit the hint button at the top of the staging area with the &quot;H&quot; You will be presented with a multiple choice question and asked to answer it.  Getting the correct answer will reward you with hint about the placement molecule"/>
+    
+    
 </LinearLayout>
