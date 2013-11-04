@@ -5,15 +5,29 @@ import com.madness.mm.model.MolApp;
 import com.madness.mm.model.Question;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.view.DragEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.DragShadowBuilder;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
+import android.widget.GridLayout;
+import android.widget.GridLayout.LayoutParams;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +44,10 @@ public class BuilderActivity extends Activity {
 
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
+
+	private GridView gvPlacementGrid;
+
+	private TextView tvRing;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +92,31 @@ public class BuilderActivity extends Activity {
 
 		fieldQuestion(app.getQuiz().getNextQuestion());
 		setTitle(String.format("Question %d", app.getQuiz().getQuestionNum()));
+
+		gvPlacementGrid = (GridView) findViewById(R.id.builder_grid);
+		final int numCols = 5;
+		gvPlacementGrid.setNumColumns(numCols);
+		gvPlacementGrid.setAdapter(new AtomAcceptorAdapter(this, numCols,
+				numCols));
+
+		tvRing = (TextView) findViewById(R.id.ringring);
+		tvRing.setOnTouchListener(new OnTouchListener() {
+
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				if (event.getAction() == MotionEvent.ACTION_DOWN) {
+					ClipData data = ClipData.newPlainText("", "");
+					DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(
+							v);
+					v.startDrag(data, shadowBuilder, v, 0);
+					v.setVisibility(View.INVISIBLE);
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+		});
 	}
 
 	@Override
@@ -196,6 +239,93 @@ public class BuilderActivity extends Activity {
 				// hint failed code
 			}
 			break;
+		}
+	}
+
+	private class AtomAcceptor extends LinearLayout {
+
+		public AtomAcceptor(Context context) {
+			super(context);
+
+			setLayoutParams(new GridView.LayoutParams(50, 50));
+			// setPadding(8, 8, 8, 8);
+
+			setBackground(getResources().getDrawable(R.drawable.placeholder));
+			// setBackgroundColor(getResources().getColor(
+			// R.color.builderBackground));
+
+			setOnDragListener(new OnDragListener() {
+
+				@Override
+				public boolean onDrag(View v, DragEvent event) {
+					int action = event.getAction();
+					switch (event.getAction()) {
+					case DragEvent.ACTION_DRAG_STARTED:
+						// do nothing
+						break;
+					case DragEvent.ACTION_DRAG_ENTERED:
+						// do nothing
+						break;
+					case DragEvent.ACTION_DRAG_EXITED:
+						// do nothing
+						break;
+					case DragEvent.ACTION_DROP:
+						View view = (View) event.getLocalState();
+						((ViewGroup)view.getParent()).removeView(view);
+						accept(view);
+						break;
+					case DragEvent.ACTION_DRAG_ENDED:
+					default:
+						break;
+					}
+					return true;
+				}
+			});
+		}
+		
+		public void accept(View atom) {
+			this.addView(atom);
+			atom.setVisibility(VISIBLE);
+		}
+	}
+
+	private class AtomAcceptorAdapter extends BaseAdapter {
+
+		private Context mContext;
+		private int w, h;
+
+		private AtomAcceptor[] acceptors;
+
+		public AtomAcceptorAdapter(Context c, int w, int h) {
+			mContext = c;
+
+			this.w = w;
+			this.h = h;
+
+			acceptors = new AtomAcceptor[w * h];
+			for (int i = 0; i < w * h; i++) {
+				acceptors[i] = new AtomAcceptor(mContext);
+			}
+		}
+
+		@Override
+		public int getCount() {
+			return w * h;
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return acceptors[position];
+		}
+
+		@Override
+		public long getItemId(int arg0) {
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			return acceptors[position];
 		}
 	}
 }
