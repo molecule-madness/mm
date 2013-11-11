@@ -16,6 +16,8 @@ public class Quiz {
 	private boolean gameType;
 	private boolean gameDiff;
 	private ArrayList<Question> questions;
+    private int current_Score = 0;
+    ArrayList<Integer> score = new ArrayList<Integer>();
 
 	private HashSet<Question> questionsLeft;
 
@@ -97,6 +99,10 @@ public class Quiz {
 
 		if (correct) {
 			questionsLeft.remove(q);
+            current_Score += 10;
+            if(questionsLeft.isEmpty()){
+                Stats.getInstance().addScore(current_Score);
+            }
 		}
 	}
 
